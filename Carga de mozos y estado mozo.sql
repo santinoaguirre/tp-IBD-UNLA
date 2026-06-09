@@ -23,6 +23,41 @@ INSERT INTO mozo (id, nombre, apellido, email, fecha_ingreso, id_mozo_estado) VA
 (5, 'Lucas', 'Romero', 'lucas.romero@restaurante.com', '2021-06-12', 3);
 
 -- =========================
+-- ESTADOS DE MESA
+-- =========================
+
+INSERT INTO mesa_estado (id, nombre, descripcion) VALUES
+(1, 'Libre', 'Mesa disponible para ser ocupada'),
+(2, 'Ocupada', 'Mesa actualmente en uso'),
+(3, 'Reservada', 'Mesa reservada por un cliente'),
+(4, 'Inactiva', 'Mesa fuera de servicio');
+
+-- =========================
+-- UBICACIONES DE MESA
+-- =========================
+
+INSERT INTO mesa_ubicacion (id, nombre, descripcion) VALUES
+(1, 'Salon principal', 'Sector principal del restaurante'),
+(2, 'Ventana', 'Mesas ubicadas cerca de la ventana'),
+(3, 'Patio', 'Sector externo del restaurante'),
+(4, 'Terraza', 'Sector de terraza'),
+(5, 'Exterior', 'Mesas ubicadas en la vereda o espacio exterior');
+
+-- =========================
+-- MESAS
+-- =========================
+
+INSERT INTO mesa (id, numero, capacidad, id_mesa_ubicacion, id_mesa_estado) VALUES
+(1, 1, 2, 1, 1),
+(2, 2, 4, 1, 2),
+(3, 3, 4, 2, 1),
+(4, 4, 6, 1, 2),
+(5, 5, 2, 3, 3),
+(6, 6, 8, 3, 1),
+(7, 7, 4, 4, 1),
+(8, 8, 6, 1, 4);
+
+-- =========================
 -- CATEGORIAS DE PRODUCTO
 -- =========================
 
