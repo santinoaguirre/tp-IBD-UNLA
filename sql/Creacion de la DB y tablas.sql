@@ -2,11 +2,6 @@ CREATE DATABASE IF NOT EXISTS restaurante_db;
 
 USE restaurante_db;
 
--- =========================
--- LIMPIEZA (re-ejecutable)
--- Se eliminan las tablas en orden inverso de dependencias
--- =========================
-
 DROP TABLE IF EXISTS pedido_detalle;
 DROP TABLE IF EXISTS pedido;
 DROP TABLE IF EXISTS pedido_estado;
