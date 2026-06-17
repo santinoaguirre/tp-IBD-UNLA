@@ -3,10 +3,10 @@ USE restaurante_db;
 -- Cambiar estado de un pedido de 'Pendiente' a 'Entregado'
 UPDATE pedido
 SET id_pedido_estado = (SELECT id FROM pedido_estado WHERE nombre = 'Entregado')
-WHERE id = 1;
+WHERE id = 5;
 
 -- Verificación
 SELECT p.id, pe.nombre AS estado, p.fecha, p.hora
 FROM pedido p
 JOIN pedido_estado pe ON p.id_pedido_estado = pe.id
-WHERE p.id = 1;
+WHERE p.id = 5;

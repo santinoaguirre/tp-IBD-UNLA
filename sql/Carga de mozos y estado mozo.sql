@@ -1,5 +1,26 @@
 USE restaurante_db;
 
+-- =========================
+-- LIMPIEZA DE DATOS (re-ejecutable)
+-- TRUNCATE reinicia los AUTO_INCREMENT y no se ve afectado por el modo
+-- "safe update" de Workbench. Se desactivan las FK para poder vaciar
+-- las tablas padre sin conflictos de integridad referencial.
+-- =========================
+
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE pedido_detalle;
+TRUNCATE TABLE pedido;
+TRUNCATE TABLE producto;
+TRUNCATE TABLE mesa;
+TRUNCATE TABLE mozo;
+TRUNCATE TABLE pedido_estado;
+TRUNCATE TABLE producto_estado;
+TRUNCATE TABLE producto_categoria;
+TRUNCATE TABLE mesa_ubicacion;
+TRUNCATE TABLE mesa_estado;
+TRUNCATE TABLE mozo_estado;
+SET FOREIGN_KEY_CHECKS = 1;
+
 START TRANSACTION;
 
 -- =========================

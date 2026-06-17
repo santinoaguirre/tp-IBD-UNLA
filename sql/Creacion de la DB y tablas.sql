@@ -3,6 +3,23 @@ CREATE DATABASE IF NOT EXISTS restaurante_db;
 USE restaurante_db;
 
 -- =========================
+-- LIMPIEZA (re-ejecutable)
+-- Se eliminan las tablas en orden inverso de dependencias
+-- =========================
+
+DROP TABLE IF EXISTS pedido_detalle;
+DROP TABLE IF EXISTS pedido;
+DROP TABLE IF EXISTS pedido_estado;
+DROP TABLE IF EXISTS producto;
+DROP TABLE IF EXISTS producto_estado;
+DROP TABLE IF EXISTS producto_categoria;
+DROP TABLE IF EXISTS mesa;
+DROP TABLE IF EXISTS mesa_ubicacion;
+DROP TABLE IF EXISTS mesa_estado;
+DROP TABLE IF EXISTS mozo;
+DROP TABLE IF EXISTS mozo_estado;
+
+-- =========================
 -- ESTADOS DE MOZO
 -- =========================
 

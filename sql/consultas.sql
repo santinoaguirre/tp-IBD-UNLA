@@ -1,3 +1,5 @@
+USE restaurante_db;
+
 /* Todos los pedidos con mesa y mozo */
 SELECT p.id, m.numero AS mesa, mo.nombre, mo.apellido, 
        p.fecha, p.hora, pe.nombre AS estado
