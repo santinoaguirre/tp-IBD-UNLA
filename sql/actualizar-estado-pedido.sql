@@ -1,8 +1,8 @@
 USE restaurante_db;
 
--- Cambiar estado de un pedido de 'Abierto' a 'Cerrado'
+-- Cambiar estado de un pedido de 'Pendiente' a 'Entregado'
 UPDATE pedido
-SET id_pedido_estado = (SELECT id FROM pedido_estado WHERE nombre = 'Cerrado')
+SET id_pedido_estado = (SELECT id FROM pedido_estado WHERE nombre = 'Entregado')
 WHERE id = 1;
 
 -- Verificación
